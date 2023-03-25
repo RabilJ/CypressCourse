@@ -1,0 +1,23 @@
+{
+  "name": "cypresscourse",
+  "version": "1.0.0",
+  "description": "Kurs CDP",
+  "main": "test.js",
+  "scripts": {
+    "test": "console.log('Cześć')"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RabilJ/CypressCourse.git"
+  },
+  "author": "Jakub Popielarski",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RabilJ/CypressCourse/issues"
+  },
+  "homepage": "https://github.com/RabilJ/CypressCourse#readme",
+  "devDependencies": {
+    "cypress": "^12.8.1",
+    "@faker-js/faker": "^7.6.0"
+  }
+}
