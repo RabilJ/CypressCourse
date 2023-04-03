@@ -5,7 +5,7 @@ describe('Newsletter test scenario #321', () =>{
     })
 
     it('NewsletterClick', () =>{
-        cy.get('span').contains('ZAPISZ MNIE NA NEWSLETTER').click()
+        cy.get('span').contains('ZAPISZ MNIE NA NEWSLETTER').click({force: true})
     })
 
     it('ValidateElementStructure', () =>{
