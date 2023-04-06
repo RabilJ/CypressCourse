@@ -23,10 +23,18 @@ describe('Newsletter test scenario #321', () =>{
         cy.get('input[class="user_email_ajax"')
 
     //Custom attribute - created for tester
-        data-e2e
-        data-cy
-        data-test
-        data-testid
+    //data-e2e
+    //data-cy
+    //data-test
+    //data-testid
+    })
+
+    it('customAttributesTest', () =>{
+    
+        cy.get('button[data-e2e="abc"')
+        cy.get('button[data-cy="abc"')
+        cy.get('button[data-test="abc"')
+        cy.get('button[data-testid="abc"')
     })
 })
 
