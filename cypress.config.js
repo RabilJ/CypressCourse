@@ -7,4 +7,9 @@ module.exports = defineConfig({
     },
     projectId: "rpyd8d",
   },
+  "compilerOptions": {
+    "types": [
+      "cypress"
+    ]
+  }
 });
