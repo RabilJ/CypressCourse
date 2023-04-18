@@ -1,7 +1,7 @@
-describe('TestScenario1', () =>{
+describe('Module 5 TestScenario1', () =>{
 
 
-    it('visit main page and click menu button', function() {
+    it('visit main page and click newsletter button', function() {
         //Open url
        cy.visit('https://fabrykatestow.pl')
        //Get certain element - in example nv-primary-navigation-main id
