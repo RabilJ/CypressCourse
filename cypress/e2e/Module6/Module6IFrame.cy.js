@@ -6,44 +6,31 @@ const button2 = '#simpleButton2'
 const iframeButton = '[id^="simpleButton"]'
 const iframe = 'iframe'
 
-describe('This is Module6 IFrame - TS1', () => {
-    it('It should test IFrame', function() {
+describe('Test iframes Module 6 - TS1', function() {
+
+    beforeEach(() =>{
         cy.visit(url)
+        cy.get(iframeHeader).should('have.text', iframeHeaderValue).click()
+    })
 
-        cy.get(iframeHeader).should('have.text',iframeHeaderValue).click()
-
+    it('It should test iframe without iframe library', () => {
         const iframeTest = cy.get(iframe)
         .its('0.contentDocument.body')
         .should('be.visible')
         .then(cy.wrap)
 
-        //It will find the element
-        iframeTest.find(button1).click()
+        iframeTest.find(button1).should('be.visible').click()
+    })
 
-        //It will not find the element - using iframeTest for the second time causes Assertion error
-        //iframeTest.find(button2).click()
-
-        cy.wait(3000)
-
-        //It is highly recommended to install iframe package with npm install -D cypress-iframe
-        cy.frameLoaded({ url: url})
-        cy.iframe().find(iframeButton).first().should('be.visible').click()
-
-        cy.wait(3000)
+    it('It should test iframe with cy.iframe() function', () => {
 
         cy.iframe().find(iframeButton).last().should('be.visible').click()
+    })
 
-        cy.wait(3000)
-
-        cy.enter().then(getBody => {
-            getBody().find(iframeButton).last().should('be.visible').click()
-        })
-
-        cy.wait(3000)
+    it('It should test iframe with cy.enter() function', () => {
 
         cy.enter().then(getBody => {
             getBody().find(iframeButton).first().should('be.visible').click()
         })
     })
-
 })

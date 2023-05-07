@@ -14,10 +14,10 @@ describe('Module 5 Homework', () =>{
         cy.get('.elementor-button-text').contains('POKAŻ CZEGO SIĘ NAUCZĘ').first().click()
 
         //Save screenshot section to variable
-        const screenShotElement = cy.get('section[class="elementor-section elementor-top-section elementor-element elementor-element-2d7d28f4 elementor-section-boxed elementor-section-height-default elementor-section-height-default"]')
+        const screenShotElement = cy.get('section[data-id="2d7d28f4"]')
         
         //Scroll to screenshot section, wait 5 second so the image can load and take a screenshot
-        screenShotElement.scrollIntoView().wait(5000).screenshot('screenshot')
+        screenShotElement.scrollIntoView().screenshot('screenshot')
         
     })
 })
