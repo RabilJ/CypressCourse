@@ -36,8 +36,12 @@ describe('Module 6 Rest Client - Homework', () =>{
 
     it('It should test json placeholder API - DELETE', function () {
 
-        cy.request('DELETE', url+'1')
-    
+        cy.request('DELETE', url + '1').then((response) => {
+
+            const body = JSON.stringify(response.body)
+            expect(body).to.be.eq('{}')
+            expect(response.status).to.eq(200)
+        })
     })
 
     it('It should test json placeholder API - PUT', function () {
