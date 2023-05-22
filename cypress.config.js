@@ -8,6 +8,7 @@ module.exports = defineConfig({
       // implement node event listeners here
     },
     projectId: "rpyd8d",
+    baseUrl: 'https://simpletestsite.fabrykatestow.pl/'
 
   },
   compilerOptions: {
