@@ -14,6 +14,10 @@ describe('Simple test site scenario', () => {
         homePage.visitPage()
     })
 
+    afterEach(() => {
+        cy.wait(2000)
+    })
+
     it('It should test Inputs Tab', () => {
         
         const inputPage = new InputPage();

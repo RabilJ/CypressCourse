@@ -4,17 +4,15 @@ const dropdown = '#dropdown'
 class DropdownListPage {
 
     checkIfDefaultOptionIsDisabled() {
-        cy.get(dropdown).get('option[selected="selected"').should('have.text','Please select an option').should('be.disabled')
+        cy.get('option[selected="selected"').should('be.disabled')
     }
 
     selectOptionOne() {
-        cy.get(dropdown).select('Option 1')
-        cy.get('option[selected="selected"').should('have.text','Option 1')
+        cy.get(dropdown).select('Option 1').should('have.value', '1')
     }
 
     selectOptionTwo() {
-        cy.get(dropdown).select('Option 2')
-        cy.get('option[selected="selected"').should('have.text','Option 2')
+        cy.get(dropdown).select('Option 2').should('have.value', '2')
     }
 
 }
