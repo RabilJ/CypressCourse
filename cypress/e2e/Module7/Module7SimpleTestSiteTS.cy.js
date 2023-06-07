@@ -14,10 +14,6 @@ describe('Simple test site scenario', () => {
         homePage.visitPage()
     })
 
-    afterEach(() => {
-        cy.wait(2000)
-    })
-
     it('It should test Inputs Tab', () => {
         
         const inputPage = new InputPage();
@@ -35,17 +31,13 @@ describe('Simple test site scenario', () => {
         
         homePage.clickCheckboxesTab()
 
-        cy.wait(2000)
+        cy.wait(100)
 
         checkboxPage.unclickBothCheckboxes()
         checkboxPage.checkCheckboxOne()
 
-        cy.wait(2000)
-
         checkboxPage.unclickBothCheckboxes()
         checkboxPage.checkCheckboxTwo()
-
-        cy.wait(2000)
 
         checkboxPage.unclickBothCheckboxes()
         checkboxPage.checkBothCheckboxes()
@@ -60,11 +52,7 @@ describe('Simple test site scenario', () => {
 
         dropdownListPage.checkIfDefaultOptionIsDisabled()
 
-        cy.wait(2000)
-
         dropdownListPage.selectOptionOne()
-
-        cy.wait(2000)
 
         dropdownListPage.selectOptionTwo()
 
@@ -76,6 +64,7 @@ describe('Simple test site scenario', () => {
         
         homePage.clickHoversTab()
 
+        hoversPage.hoverOverElement()
     })
 
 })
