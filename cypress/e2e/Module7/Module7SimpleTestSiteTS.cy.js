@@ -3,7 +3,9 @@ import CheckboxPage from "../page-objects/checkboxPage";
 import DropdownListPage from "../page-objects/dropdownListPage";
 import HomePage from "../page-objects/homePage"
 import HoversPage from "../page-objects/hoversPage";
-import InputPage from "../page-objects/inputPage"
+import InputPage from "../page-objects/inputPage";
+
+
 
 
 describe('Simple test site scenario', () => {
