@@ -1,3 +1,4 @@
+import HomePage from "../page-objects/homePage";
 import BasicAuthPage from "../page-objects/basicAuthPage"; //TO DO
 import FormPage from "../page-objects/formPage"; //TO DO
 import KeyPressesPage from "../page-objects/keyPressesPage"; //TO DO
@@ -17,35 +18,56 @@ describe('Simple test site scenario', () => {
     })
 
     it('It should test BasicAuth Tab', () => {
+        homePage.clickBasicAuthTab();
 
+        const basicAuthPage = new BasicAuthPage();
 
     })
 
     it('It should test Form Tab', () => {
+        homePage.clickFormTab();
 
+        const formPage = new FormPage();
+        
     })
 
     it('It should test Key Presses Tab', () => {
+        homePage.clickKeyPressesTab();
 
+        const keyPressesPage = new KeyPressesPage();
     })
 
     it('It should test Add/Remove elements Tab', () => {
+        homePage.clickAddRemoveElementsTab();
 
+        const addRemoveElementsPage = new AddRemoveElementsPage();
     })
 
     it('It should test Status Codes Tab', () => {
-
+        homePage.clickStatusCodesTab();
+        
+        const statusCodesPage = new StatusCodesPage();
     })
 
     it('It should test IFrame Tab', () => {
+        homePage.clickIFrameTab();
+        
+        const iframePage = new IFramePage();
 
+        iframePage.clickFirstIFrameButton();
+        iframePage.clickLastIFrameButton();
     })
 
     it('It should test Drag and Drop Tab', () => {
+        homePage.clickDragAndDropTab();
 
+        const dragAndDropPage = new DragAndDropPage();
     })
 
     it('It should test Date picker Tab', () => {
+        homePage.clickDatePickerTab();
+
+        const datePickerPage = new DatePickerPage();
 
     })
 
